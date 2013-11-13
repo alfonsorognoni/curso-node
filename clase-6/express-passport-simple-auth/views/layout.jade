@@ -5,5 +5,7 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     .menu-top
+      - if(typeof user != 'undefined'){
       a(href="/logout") Salir
+      - }
     block content

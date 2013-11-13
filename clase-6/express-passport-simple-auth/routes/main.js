@@ -9,9 +9,13 @@ adminAuth = function(req, res, next){
     //authorize role
     console.log(req.user)
     if(typeof req.user != "undefined"){
+	console.log(req.user);
+	res.locals.user = req.user;
         next();
     }else{
         //Not authorized go to the login form
+	console.log(req.user);
+	res.locals.user = req.user;
         res.redirect('/admin');
     }
 }
