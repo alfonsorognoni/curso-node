@@ -15,7 +15,6 @@ adminAuth = function(req, res, next){
     }else{
         //Not authorized go to the login form
 	console.log(req.user);
-	res.locals.user = req.user;
         res.redirect('/admin');
     }
 }
